@@ -1,0 +1,32 @@
+<div class="pop-box">
+    <div class="pop-box-hd" style="background: #337ab7">
+        <%=title %>
+    </div>
+    <div class="pop-box-bd">
+        <!--<div class="btn-h-group" style="padding:10px;">-->
+        <!--</div>-->
+        <div class="visible-lg-block">
+            <img class="download-QR-code" src="./images/icons/downloadWWW.png" width="210px" style="display: block;margin: 0 auto;padding: 10px 0;"/>
+        </div>
+        <div class="visible-xs-block visible-sm-block" style="text-align:center;margin:20px 0;">
+            <a class="btn btn-primary btn-download-iphone" href="#" role="button" style="width: 200px;margin-bottom: 15px;border-radius:4px !important;">
+                <span class="icon-app-iphone"></span><b style="line-height: 32px;width: 100px;text-align: right">iPhone</b>
+            </a>
+            <a class="btn btn-primary btn-download-android" href="#" role="button" style="width: 200px;margin-bottom: 15px;border-radius:4px !important;">
+                <span class="icon-app-android"></span><b style="line-height: 32px;width: 100px;text-align: right">Android</b>
+            </a>
+        </div>
+        <!--<p style="color: gray;display: block;margin: 0 auto;">打开微信，点击底部的“发现”，使用 “扫一扫” 即可将网页分享到我的朋友圈。</p>-->
+        <!--
+        <label class="check" style="margin: 10px;"><input id="agreedPolicy" type="checkbox" checked=""><i></i>
+            <span style="color: gray">我已阅读且知晓公司相关政策，并对公司制度无任何异议。</span>
+        </label>
+        -->
+        <div class="pop-box-btns">
+            <% for(var i = 0, len = btns.length; i < len; i++ ) {%>
+            <div class="pop-box-flexbd <%=btns[i].className%>" style="cursor: pointer">
+                <%=btns[i].name%></div>
+            <% } %>
+        </div>
+    </div>
+</div>

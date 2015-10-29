@@ -1,0 +1,1 @@
+define(["AbstractView",getViewTemplatePath("shareHR"),"UIToast","EnvStore","UILoading","LanguageStore"],function(a,b,c,d,e,f){d.getInstance(),f.getInstance();return _.inherit(a,{onCreate:function(){var a=this;a.$el.html(b)},events:{},jsonpCallback:function(a){alert(a.message)},onPreShow:function(){this.turning()},onShow:function(){},onHide:function(){}})});

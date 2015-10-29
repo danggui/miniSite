@@ -1,0 +1,18 @@
+﻿<div class="pop-box">
+  <div class="pop-box-hd" style="background: #337ab7;">
+    <%=title %>
+  </div>
+  <div class="pop-box-bd" style="overflow-y: scroll; position: relative;">
+    <ul class="form-item-list" style="position: absolute; width: 100%; ">
+      <%for(var i = 0, len = data.length; i < len; i++) { %>
+      <%if(data[i].id=="title"){%>
+      <div data-index="<%=i %>" data-id="<%=data[i].data%>" class="form-item-li dropdown-parent" style="padding: 1em 2em; background: #f5f5f5;color: #337ab7;font-weight: bold"><%=data[i].name || data[i].id %>
+        <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+      </div>
+      <%}else{%>
+      <li data-index="<%=i %>" data-leaf-id="<%=data[i].data%>" <%if(i == index){%>class="form-item-li current"<%}else{%>class="form-item-li"<%} %>  style="padding-left:4em;"><%=data[i].name || data[i].id %></li>
+      <% }%>
+      <% } %>
+    </ul>
+  </div>
+</div>
